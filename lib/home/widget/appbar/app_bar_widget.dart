@@ -13,6 +13,7 @@ class AppBarWidget extends PreferredSize {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -36,7 +37,7 @@ class AppBarWidget extends PreferredSize {
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
                             image: NetworkImage(
-                              'https://avatars.githubusercontent.com/u/5382483',
+                              'https://pt.gravatar.com/userimage/146224715/8bf33285aa3f3a7b1a0906865b2d70ec.png',
                             ),
                           ),
                         ),
