@@ -1,3 +1,4 @@
+import 'package:devquizflutter/challenge/widget/awnser/awnser_widget.dart';
 import 'package:devquizflutter/core/core.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +19,13 @@ class QuizWidget extends StatelessWidget {
           SizedBox(
             height: 14,
           ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: AwnserWidget(
+              title:
+                  "Possibilita a criação de aplicativos compilados nativamente",
+            ),
+          )
         ],
       ),
     );
