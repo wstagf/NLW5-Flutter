@@ -4,18 +4,46 @@ import 'package:google_fonts/google_fonts.dart';
 
 class LevelButtonWidget extends StatelessWidget {
   final String label;
+  final config = {
+    "Fácil": {
+      "backgroundColor": AppColors.levelButtonFacil,
+      "borderColor": AppColors.levelButtonBorderFacil,
+      "fontColor": AppColors.levelButtonTextFacil
+    },
+    "Médio": {
+      "backgroundColor": AppColors.levelButtonMedio,
+      "borderColor": AppColors.levelButtonBorderMedio,
+      "fontColor": AppColors.levelButtonTextMedio
+    },
+    "Difícil": {
+      "backgroundColor": AppColors.levelButtonDificil,
+      "borderColor": AppColors.levelButtonBorderDificil,
+      "fontColor": AppColors.levelButtonTextDificil
+    },
+    "Perito": {
+      "backgroundColor": AppColors.levelButtonPerito,
+      "borderColor": AppColors.levelButtonBorderPerito,
+      "fontColor": AppColors.levelButtonTextPerito
+    }
+  };
 
-  const LevelButtonWidget({Key key, @required this.label}) : super(key: key);
+  LevelButtonWidget({Key key, @required this.label})
+      : assert(["Fácil", "Médio", "Difícil", "Perito"].contains(label)),
+        super(key: key);
+
+  Color get backgroundColor => config[label]['backgroundColor'];
+  Color get borderColor => config[label]['borderColor'];
+  Color get fontColor => config[label]['fontColor'];
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(28),
-        color: AppColors.levelButtonFacil,
+        color: backgroundColor,
         border: Border.fromBorderSide(
           BorderSide(
-            color: AppColors.levelButtonBorderFacil,
+            color: borderColor,
             width: 1,
           ),
         ),
@@ -28,7 +56,7 @@ class LevelButtonWidget extends StatelessWidget {
         child: Text(
           label,
           style: GoogleFonts.notoSans(
-            color: AppColors.levelButtonTextFacil,
+            color: fontColor,
             fontSize: 13,
           ),
         ),
