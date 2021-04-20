@@ -1,5 +1,5 @@
 import 'package:devquizflutter/core/core.dart';
-import 'package:devquizflutter/home/widget/chart_widget/chart_widget.dart';
+import 'package:devquizflutter/home/widget/chart/chart_widget.dart';
 import 'package:flutter/material.dart';
 
 class ScoreCardWidget extends StatelessWidget {
