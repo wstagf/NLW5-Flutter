@@ -26,7 +26,7 @@ class ScoreCardWidget extends StatelessWidget {
               ),
             ),
             Expanded(
-              flex: 3,
+                flex: 2,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -34,16 +34,22 @@ class ScoreCardWidget extends StatelessWidget {
                   Text(
                     'Vamos Começar',
                     style: AppTextStyles.heading,
+                      textAlign: TextAlign.center,
+                    ),
+                    SizedBox(
+                      height: 5,
                   ),
                   Text(
                     'Complete os desafios e ganhe conhecimento',
                     style: AppTextStyles.body,
+                      textAlign: TextAlign.center,
                   ),
                 ],
               ),
             ),
           ],
         ),
+      ),
       ),
     );
   }
