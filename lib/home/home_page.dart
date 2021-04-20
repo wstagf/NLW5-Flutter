@@ -37,9 +37,19 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
+              SizedBox(
+                height: 20,
+              ),
               Expanded(
-                child: ListView(
+                child: GridView.count(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,
                   children: [
+                    QuizCardwidget(),
+                    QuizCardwidget(),
+                    QuizCardwidget(),
+                    QuizCardwidget(),
                     QuizCardwidget(),
                     QuizCardwidget(),
                   ],

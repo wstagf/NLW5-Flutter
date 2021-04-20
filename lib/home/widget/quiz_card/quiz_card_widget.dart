@@ -43,7 +43,6 @@ class QuizCardwidget extends StatelessWidget {
                 ),
               ),
               Expanded(
-                flex: 4,
                 child: LinearProgressIndicator(
                   value: 0.3,
                   backgroundColor: AppColors.chartSecondary,
