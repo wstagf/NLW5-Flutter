@@ -13,6 +13,8 @@ class ScoreCardWidget extends StatelessWidget {
           color: AppColors.white,
           borderRadius: BorderRadius.circular(20),
         ),
+        child: Padding(
+          padding: const EdgeInsets.all(24.0),
         child: Row(
           children: [
             Expanded(
