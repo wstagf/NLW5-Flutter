@@ -15,41 +15,41 @@ class ScoreCardWidget extends StatelessWidget {
         ),
         child: Padding(
           padding: const EdgeInsets.all(24.0),
-        child: Row(
-          children: [
-            Expanded(
-              flex: 1,
-              child: Container(
-                width: 80,
-                height: 80,
-                child: ChartWidget(),
+          child: Row(
+            children: [
+              Expanded(
+                flex: 1,
+                child: Container(
+                  width: 80,
+                  height: 80,
+                  child: ChartWidget(),
+                ),
               ),
-            ),
-            Expanded(
+              Expanded(
                 flex: 2,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    'Vamos Começar',
-                    style: AppTextStyles.heading,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Vamos Começar',
+                      style: AppTextStyles.heading,
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(
                       height: 5,
-                  ),
-                  Text(
-                    'Complete os desafios e ganhe conhecimento',
-                    style: AppTextStyles.body,
+                    ),
+                    Text(
+                      'Complete os desafios e ganhe conhecimento',
+                      style: AppTextStyles.body,
                       textAlign: TextAlign.center,
-                  ),
-                ],
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
-      ),
       ),
     );
   }
