@@ -1,4 +1,5 @@
 import 'package:devquizflutter/home/widget/level_button_widget/level_button_widget.dart';
+import 'package:devquizflutter/home/widget/quiz_card/quiz_card_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'widget/appbar/app_bar_widget.dart';
@@ -17,21 +18,26 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.only(top: 10.0),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
             children: [
-              LevelButtonWidget(
-                label: "Fácil",
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  LevelButtonWidget(
+                    label: "Fácil",
+                  ),
+                  LevelButtonWidget(
+                    label: "Médio",
+                  ),
+                  LevelButtonWidget(
+                    label: "Difícil",
+                  ),
+                  LevelButtonWidget(
+                    label: "Perito",
+                  ),
+                ],
               ),
-              LevelButtonWidget(
-                label: "Médio",
-              ),
-              LevelButtonWidget(
-                label: "Difícil",
-              ),
-              LevelButtonWidget(
-                label: "Perito",
-              ),
+              QuizCardwidget(),
             ],
           ),
         ),
