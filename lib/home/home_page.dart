@@ -37,7 +37,14 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-              QuizCardwidget(),
+              Expanded(
+                child: ListView(
+                  children: [
+                    QuizCardwidget(),
+                    QuizCardwidget(),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
