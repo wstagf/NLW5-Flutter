@@ -13,8 +13,28 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarWidget(),
-      body: LevelButtonWidget(
-        label: "Faci2l",
+      body: Container(
+        padding: const EdgeInsets.only(top: 10.0),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              LevelButtonWidget(
+                label: "Fácil",
+              ),
+              LevelButtonWidget(
+                label: "Médio",
+              ),
+              LevelButtonWidget(
+                label: "Difícil",
+              ),
+              LevelButtonWidget(
+                label: "Perito",
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
