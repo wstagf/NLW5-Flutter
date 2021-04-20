@@ -33,50 +33,53 @@ class AwnserWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: isSelected ? _selectedColorCardRight : AppColors.white,
-        borderRadius: BorderRadius.circular(10),
-        border: Border.fromBorderSide(
-          BorderSide(
-              color: isSelected ? _selectedColorCardRight : AppColors.border),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 4),
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        decoration: BoxDecoration(
+          color: isSelected ? _selectedColorCardRight : AppColors.white,
+          borderRadius: BorderRadius.circular(10),
+          border: Border.fromBorderSide(
+            BorderSide(
+                color: isSelected ? _selectedColorCardRight : AppColors.border),
+          ),
         ),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Expanded(
-              child: Text(
-                title,
-                style:
-                    isSelected ? _selectedTextStyleRight : AppTextStyles.body,
-              ),
-            ),
-            Container(
-              width: 24,
-              height: 24,
-              decoration: BoxDecoration(
-                color: isSelected ? _selectedColorRight : AppColors.border,
-                borderRadius: BorderRadius.circular(24),
-                border: Border.fromBorderSide(
-                  BorderSide(
-                      color: isSelected
-                          ? _selectedColorCardRight
-                          : AppColors.border),
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Text(
+                  title,
+                  style:
+                      isSelected ? _selectedTextStyleRight : AppTextStyles.body,
                 ),
               ),
-              child: isSelected
-                  ? Icon(
-                      _selectedIconRight,
-                      color: AppColors.white,
-                      size: 16,
-                    )
-                  : null,
-            )
-          ],
+              Container(
+                width: 24,
+                height: 24,
+                decoration: BoxDecoration(
+                  color: isSelected ? _selectedColorRight : AppColors.border,
+                  borderRadius: BorderRadius.circular(24),
+                  border: Border.fromBorderSide(
+                    BorderSide(
+                        color: isSelected
+                            ? _selectedColorCardRight
+                            : AppColors.border),
+                  ),
+                ),
+                child: isSelected
+                    ? Icon(
+                        _selectedIconRight,
+                        color: AppColors.white,
+                        size: 16,
+                      )
+                    : null,
+              )
+            ],
+          ),
         ),
       ),
     );
